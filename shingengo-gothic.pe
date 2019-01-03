@@ -1,0 +1,36 @@
+#!/usr/bin/fontforge -script
+
+Open("ipag.ttf")
+
+SelectSingletons(0u65b0)
+Copy()
+SelectSingletons(0u32ff)
+Paste()
+
+SelectSingletons(0u5143)
+Copy()
+SelectSingletons(0u32ff)
+PasteWithOffset(1800, 0)
+
+SelectSingletons(0u53f7)
+Copy()
+SelectSingletons(0u32ff)
+PasteWithOffset(3600, 0)
+
+Scale(35, 100)
+
+SetWidth(2048)
+CenterInWidth()
+
+ExpandStroke(25, 0, 0, 0, 1)
+
+RoundToInt()
+RemoveOverlap()
+RoundToInt()
+
+SetFontNames("ShingengoGothic", "ShingengoGothic", "ShingengoGothic")
+SetTTFName(0x411, 1, "ShingengoGothic")
+SetUniqueID(0)
+Generate("shingengo-gothic.ttf")
+
+Close()
